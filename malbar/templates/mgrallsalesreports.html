@@ -1,0 +1,523 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+
+
+
+
+
+
+
+
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  {% comment %} <link rel="stylesheet" href="../contrast-bootstrap-pro/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../contrast-bootstrap-pro/css/cdb.css" />
+  <script src="../contrast-bootstrap-pro/js/cdb.js"></script>
+  <script src="../contrast-bootstrap-pro/js/bootstrap.min.js"></script> {% endcomment %}
+  <script src="https://kit.fontawesome.com/9d1d9a82d2.js" crossorigin="anonymous"></script>
+
+  <title></title>
+ {% comment %} compiled and minfied css {% endcomment %}
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+ {% comment %} compiled js {% endcomment %}
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+ {% comment %} bootstrap icons {% endcomment %}
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+  <title>
+
+    All SalesReport
+
+
+
+
+
+  </title>
+
+
+
+  <script>new SimpleBar(document.querySelector('div'));</script>
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+
+  <!-- Nucleo Icons -->
+  <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.css" />
+
+
+
+
+
+
+  <link id="pagestyle" href="{% static '/css/material-dashboard.css' %}" rel="stylesheet" />
+  <link rel="stylesheet" href="{% static '/css/mgrallreports.css' %}">
+
+
+
+
+
+</head>
+
+
+<body class="g-sidenav-show " style="background-color: #121929;">
+
+
+
+  <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 "
+  style="background-color:#473159 " id="sidenav-main ">
+  
+  <div class="sidenav-header">
+    <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
+      aria-hidden="true" id="iconSidenav"></i>
+
+    <span class="ms-4 font-weight-bold text-white">Manager</span>
+    </a>
+  </div>
+  
+  
+  <hr class="horizontal light mt-0 mb-2">
+  
+  <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+    <ul class="navbar-nav">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <li class="nav-item">
+        <a class="nav-link text-white active" href="{% url 'Sales_Report_form' %}">
+  
+          <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+            <i class="material-icons opacity-10">table_view</i>
+          </div>
+  
+          <span class="nav-link-text ms-1 ">Sales Report</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white " href="{% url 'stock_report_form' %}">
+  
+          <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+            <i class="material-icons opacity-10">table_view</i>
+          </div>
+  
+          <span class="nav-link-text ms-1">Stock Report</span>
+        </a>
+      </li>
+  
+  
+      <li class="nav-item">
+        <a class="nav-link text-white " href="{% url 'mgremployeedetails' %}">
+  
+          <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+            <i class="material-icons opacity-10">groups</i>
+          </div>
+  
+          <span class="nav-link-text ms-1">Employees</span>
+        </a>
+      </li>
+  
+  
+      <li class="nav-item">
+        <a class="nav-link text-white " href="{% url 'taskassignment' %}">
+  
+          <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+            <i class="material-icons opacity-10">inventory</i>
+          </div>
+  
+          <span class="nav-link-text ms-1">Task assignment</span>
+        </a>
+      </li>
+  
+  
+  
+      <li class="nav-item">
+        <a class="nav-link text-white " href="{% url 'todolist' %}">
+  
+          <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+            <i class="material-icons opacity-10">checklist</i>
+          </div>
+  
+          <span class="nav-link-text ms-1">To do list</span>
+        </a>
+      </li>
+  
+      <li class="nav-item">
+        <a class="nav-link text-white " href="{% url 'alerts' %}">
+  
+          <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+            <i class="material-icons opacity-10">notification_add</i>
+          </div>
+  
+          <span class="nav-link-text ms-1">Alerts</span>
+        </a>
+      </li>
+  
+  
+      <li class="nav-item">
+        <a class="nav-link text-white " href="{% url 'index' %}">
+  
+          <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+            <i class="material-icons opacity-10">logout</i>
+          </div>
+  
+          <span class="nav-link-text ms-1">Sign Out</span>
+        </a>
+      </li>
+  
+    </ul>
+  
+  </aside>
+
+  <main class="main-content border-radius-lg " style="background-color:#121929;">
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur"
+      data-scroll="true">
+      <div class="container-fluid py-1 px-3 ">
+
+        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+          <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+
+
+
+    </nav>
+
+
+    {% comment %} <div class="bg-lightt orange-text  justify-content-center"
+      style="border-radius: 3px; font-size: 17px; font-weight: 150mm; width: 250px; padding: 5px; margin-left: 920px; margin-top: 15px;">
+      Malabar Hypermarket, Masafi</div> {% endcomment %}
+
+
+
+
+
+
+
+
+
+
+    <style>
+      body {
+        text-align: center;
+      }
+
+      h2 {
+        text-align: center;
+        font-family: "Verdana", sans-serif;
+        font-size: 40px;
+      }
+    </style>
+    <!-- table -->
+{% comment %} <div class="container-fluid py-4 ">  <div class="row" >
+    <div class="col-12">
+      <div class="card my-4" >
+        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-1" style="background-color:#473159"> {% endcomment %}
+          {% comment %} <div class="shadow-primary border-radius-lg pt-4 pb-3" > {% endcomment %}
+            {% comment %} {% for n in Sales  %}
+              <form action="" method="get">
+                <input type="text" name="Search_something" value=""/>
+                <input type="submit" value="Search"/>
+                  
+
+              </form>  
+            {% empty %}
+              No data found
+            {% endfor %}  {% endcomment %}
+            
+            <h6 class="text-white fw-normal text-start ms-3 text-capitalize ps-3">Sales Report</h6>
+            {% comment %} {% for n in Sales  %}  {% endcomment %}
+              {% comment %} <div class="row  my-0">
+                <div class="col"> {% endcomment %}
+                {% comment %} <div class="card card-body"> {% endcomment %}
+                   <form action="" method="get">  
+                     {% comment %} {{myFilter.form}}  {% endcomment %}
+                     {{myFilter.form}} 
+                 
+                   <input  class="mx-3" type="submit" value="Search" name="">
+                     {% comment %} <button class="btn btn-primary my-3" type="submit">
+                      Search
+                    </button>  {% endcomment %}
+                   </form> 
+                      {% comment %} <input type="text" name="Search_something" value=""/>
+                     <input type="submit" value="Search"/>
+                       
+
+                   
+
+                {% comment %} </div> {% endcomment %}
+               {% comment %} </div> {% endcomment %}
+              {% comment %} </div> {% endcomment %}
+              <table class="table my-3 table-dark">
+                {% comment %} {% for n in Sales  %}
+                  {% if forloop.counter < 2 %}
+                   <form action="" method="get">
+                     <input type="text" name="Search_something" value=""/>
+                     <input type="submit" value="Search"/>           
+                   </form>
+                  {% endif %}  
+                {% empty %}
+                 No data found
+                {% endfor %} {% endcomment %}
+                 <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">DATE</th>
+                    <th scope="col">CASH SALE</th>
+                    <th scope="col">RETURN AMOUNT</th>
+                    <th scope="col">CARD AMOUNT</th>
+                    <th scope="col">TOTAL SALE</th>
+                    <th scope="col">DISCOUNT</th>
+                    <th scope="col">NET SALE</th>
+                    <th scope="col">TOTAL VAT</th>
+                    <th scope="col">UPDATE / DELETE</th>
+                  </tr>
+                 </thead>
+                
+                 {% comment %} <tbody>
+                  {% for ad in reports %}
+                   <tr>
+                    <th scope="row">{{ forloop.counter }}</th>
+                    <td>{{ ad.date }}</td>
+                    <td>{{ ad.cash_values }}</td>
+                    <td>{{ ad.return_amount }}</td>
+                    <td>{{ ad.card_sales }}</td>   
+                    <td>{{ ad.total_sales }}</td>
+                    <td>{{ ad.discount }}</td>
+                    <td>{{ ad.net_sales }}</td>
+                    <td>{{ ad.total_VAT }}</td>
+                    
+  
+                   </tr>
+                   
+                  {% endfor %} 
+                  </tbody>
+                  {% endcomment %}
+                  <tbody>
+                    {% for item in myFilter.qs %}
+                     <tr>
+                      <th scope="row">{{ forloop.counter }}</th>
+                      <td>{{ item.date }}</td>
+                      <td>{{ item.cash_values }}</td>
+                      <td>{{ item.return_amount }}</td>
+                      <td>{{ item.card_sales }}</td>   
+                      <td>{{ item.total_sales }}</td>
+                      <td>{{ item.discount }}</td>
+                      <td>{{ item.net_sales }}</td>
+                      <td>{{ item.total_VAT }}</td>
+                      <td><a href="{% url 'updatesalesreport' pk=item.id %}" class=" btn btn-info" type="button"><i class="bi bi-arrow-up-circle"></i></a> / <a href="{% url 'deletesalesreport' pk=item.id %}" class=" btn btn-danger" type="button"><i class="bi bi-trash3"></i></a></td>
+
+                      
+    
+                     </tr>
+                     
+                    {% endfor %} 
+                    </tbody>
+                   
+               </table>
+
+               {% comment %} {% for n in Sales  %}
+                 {% if st %}
+                   <div class="row  my-0">
+                   <div class="col"> {% endcomment %}
+                   {% comment %} <div class="card card-body"> {% endcomment %}
+                    {% comment %} <form action="" method="get"> {% endcomment %}
+                      {% comment %} {{myFilter.form}} {% endcomment %}
+                      {% comment %} <br>
+                    <button class="btn btn-primary my-3" type="submit">
+                        Search
+                    </button> {% endcomment %}
+                       {% comment %} <input type="text" name="Search_something" value=""/>
+                       <input type="submit" value="Search"/>
+                        
+  
+                    </form> {% endcomment %}
+  
+                   {% comment %} </div> {% endcomment %}
+                    {% comment %} </div>
+                   </div>
+                   <table class="table my-3 table-dark">
+                   <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">DATE</th>
+                      <th scope="col">CASH SALE</th>
+                      <th scope="col">RETURN AMOUNT</th>
+                      <th scope="col">CARD AMOUNT</th>
+                      <th scope="col">TOTAL SALE</th>
+                      <th scope="col">DISCOUNT</th>
+                      <th scope="col">NET SALE</th>
+                      <th scope="col">TOTAL VAT</th>
+                    </tr>
+                    </thead>
+                  
+                    <tbody>
+                    {% for ad in reports %}
+                     <tr>
+                      <th scope="row">{{ forloop.counter }}</th>
+                      <td>{{ ad.date }}</td>
+                      <td>{{ ad.cash_values }}</td>
+                      <td>{{ ad.return_amount }}</td>
+                      <td>{{ ad.card_sales }}</td>   
+                      <td>{{ ad.total_sales }}</td>
+                      <td>{{ ad.discount }}</td>
+                      <td>{{ ad.net_sales }}</td>
+                      <td>{{ ad.total_VAT }}</td>
+                      
+    
+                     </tr>
+                     
+                    {% endfor %} 
+                    </tbody>
+                  </table>  
+                 {% endif %}
+               {% empty %}
+                 No data found
+               {% endfor %}  {% endcomment %}
+
+            {% comment %} {% empty %}
+              No data found      
+            {% endfor %} {% endcomment %}
+
+            {% comment %} <input type="date" name="" id=""> {% endcomment %}
+          {% comment %} </div> {% endcomment %}
+        {% comment %} </div> {% endcomment %}
+        {% comment %} <div class="card-body px-0 pb-2">
+          <div class="table-responsive p-0"> {% endcomment %}
+            {% comment %} <table class="table align-items-center mb-0 ">
+              <thead>
+                <tr>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">DATE.</th>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">CASH SALE</th>
+                  <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">CREDIT SALE</th>
+                  <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">RETURN AMOUNT</th>
+                  <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">CARD AMOUNT</th>
+                  <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">TOTAL SALE</th>
+                  <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">DISCOUNT</th>
+                  <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">NET SALE</th>
+  
+                  <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">TOTAL VAT</th>
+  
+               
+              
+  
+                  
+               
+                  
+                            
+                           
+                            
+              </tbody>
+            </table> {% endcomment %}
+          
+            {% comment %} <br> <br> {% endcomment %}
+             {% comment %} <table class="table table-dark">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">DATE</th>
+                  <th scope="col">CASH SALE</th>
+                  <th scope="col">RETURN AMOUNT</th>
+                  <th scope="col">CARD AMOUNT</th>
+                  <th scope="col">TOTAL SALE</th>
+                  <th scope="col">DISCOUNT</th>
+                  <th scope="col">NET SALE</th>
+                  <th scope="col">TOTAL VAT</th>
+                </tr>
+              </thead>
+              
+              <tbody>
+                {% for ad in reports %}
+                 <tr>
+                  <th scope="row">{{ forloop.counter }}</th>
+                  <td>{{ ad.date }}</td>
+                  <td>{{ ad.cash_values }}</td>
+                  <td>{{ ad.return_amount }}</td>
+                  <td>{{ ad.card_sales }}</td>   
+                  <td>{{ ad.total_sales }}</td>
+                  <td>{{ ad.discount }}</td>
+                  <td>{{ ad.net_sales }}</td>
+                  <td>{{ ad.total_VAT }}</td>
+                  
+
+                 </tr>
+                 
+                {% endfor %} 
+                </tbody>
+                 
+             </table>   {% endcomment %}
+
+        {% comment %} <div class="container my-5">
+          <div class="row">
+            <div class="col-sm-8 offset-sm-1">
+              
+                  {% for ad in reports  %}
+                     <div class="col-sm-6">
+                      <div class="card m-2">
+                          <div class="card-body">
+                              <h3>Report-No: {{ forloop.counter }}</h3>
+                              <p>DATE:{{ ad.date }} </p>
+                              <p>CASH SALE:{{ ad.cash_values }} </p>
+                              <p>RETURN AMOUNT:{{ ad.return_amount }} </p>
+                              <p>CARD AMOUNT:{{ ad.card_sales }} </p>
+                              <p>TOTAL SALE:{{ ad.total_sales }}</p>
+                              <p>DISCOUNT:{{ ad.discount }}</p>
+                              <p>NET SALE:{{ ad.net_sales }}</p>
+                              <p>TOTAL VAT:{{ ad.total_VAT }}</p>
+                              {% comment %} <p class="text-center"><a href="{% url 'updateAddress' pk=ad.id %}" class=" btn btn-success" type="button">Update</a></p> {% endcomment %}
+      
+                          {% comment %} </div>
+                      </div>
+                     
+      
+                  {% endfor %}
+              </div>
+          </div> 
+        </div>
+      </div>        {% endcomment %}
+          
+          {% comment %} </div>
+        </div>
+      </div>
+    </div>
+  </div> {% endcomment %}
+
+
+
+
+
+
+  
+</body>
+
+</html>

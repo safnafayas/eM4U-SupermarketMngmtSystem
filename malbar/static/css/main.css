@@ -1,0 +1,45 @@
+.white-text{
+  color: white;
+}
+.black-text{
+  color: rgba(32, 32, 32,);
+  
+}
+.button{
+  transition-duration: 0.3s;
+}
+.button:hover{
+  background-color: #ff8b328e;
+  color: rgb(255, 255, 255);
+}
+.bg-first{
+  background-color: #ff8b32;
+  
+}
+.orange-text {
+  color: #F9B17A;
+}
+.black-text{
+  color: rgb(32, 32, 32);
+}
+.orange-text{
+color: #F9B17A;
+}
+.bg-navy{
+  background-color: #121929;
+}
+.bg-lightt{
+  background-color: #303345;  ;
+}
+.bg-navylight{
+  background: rgba(66, 71, 105, 0.5);
+  ;
+}
+.navy-text{
+  color: #121929;
+}
+.gradient-custom {
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background: linear-gradient(to right, rgb(39, 37, 59), rgb(4, 5, 41))
+      }

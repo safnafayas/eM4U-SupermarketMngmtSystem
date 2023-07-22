@@ -1,0 +1,66 @@
+.light-navy {
+  background-color: #49269c;
+
+}
+
+.navy {
+  background-color: #2961f0;
+
+}
+
+
+.clock {
+
+
+  letter-spacing: 2px;
+}
+
+
+.time {
+  font-size: 40px;
+  font-weight: normal;
+
+  color: rgb(255, 173, 95);
+}
+
+.timee {
+  font-size: 30px;
+  font-weight: normal;
+
+  color: rgb(255, 173, 95);
+
+}
+
+.check-in {
+  height: 90px;
+
+}
+
+.time1 {
+  font-size: 15px;
+  color: white;
+  padding-right: 20px;
+  margin-left: 50px;
+}
+
+.size {
+  font-size: 45px;
+}
+
+.time2 {
+  font-size: 15px;
+  color: white;
+  padding-right: 20px;
+}
+
+.time3 {
+  font-size: 15px;
+
+  color: white;
+}
+
+.task {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}

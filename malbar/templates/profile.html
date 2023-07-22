@@ -1,0 +1,197 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+  <title>Bootstrap Example</title>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="{% static '/css/Home.css' %}">
+  <script src="{% static 'Home.js' %}"></script>
+</head>
+
+<body class="navy">
+  <nav class="navbar navbar-expand-lg navbar-dark light-navy ">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="profile.html"><i class="bi bi-person-circle"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item ">
+            <a class="nav-link active " aria-current="page" href="Home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Attendence</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Logout</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <a href={% url 'alerts' %}>
+  <h4 class="bi bi-bell-fill text-white m-3"></h4>
+</a>
+  
+
+<div class="container rounded bg-white w-75 h-50">
+    <div class="row">
+      <div class="col-md-3 border-end">
+        <div class="d-flex flex-column align-items-center text-center py-5">
+          
+          <img
+            class="rounded-circle mt-5"
+            width="150px"
+            src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"
+          /><span class="font-weight-bold">Edogaru</span
+          ><span class="text-black-50">edogaru@mail.com.my</span
+          ><span> </span>
+        </div>
+      </div>
+      <div class="col-md-5 border-end">
+        <div class="p-3 py-5">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h4 class="text-right">Basic Informations</h4>
+          </div>
+
+          <div class="row mt-3">
+            <div class="col-md-6">
+              <li class="mb-2 mb-xl-3 display-28">
+                <span class="display-26 text-secondary me-2 font-weight-600"
+                  >Employee ID:</span
+                >EMP0004
+              </li>
+            </div>
+            <div class="col-md-6">
+              <li class="mb-2 mb-xl-3 display-28">
+                <span class="display-26 text-secondary me-2 font-weight-600"
+                  >Gender:</span
+                >
+                Male
+              </li>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-6">
+              <li class="mb-2 mb-xl-3 display-28">
+                <span class="display-26 text-secondary me-2 font-weight-600"
+                  >Start Date:</span
+                >11/02/22
+              </li>
+            </div>
+            <div class="col-md-6">
+              <li class="mb-2 mb-xl-3 display-28">
+                <span class="display-26 text-secondary me-2 font-weight-600"
+                  >DOB:</span
+                >11/02/1999
+              </li>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-6">
+              <li class="mb-2 mb-xl-3 display-28">
+                <span class="display-26 text-secondary me-2 font-weight-600"
+                  >Departement:</span
+                >Sales
+              </li>
+            </div>
+            <div class="col-md-6">
+              <li class="mb-2 mb-xl-3 display-28">
+                <span class="display-26 text-secondary me-2 font-weight-600"
+                  >Shift:</span
+                >Evening
+              </li>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-6">
+              <li class="mb-2 mb-xl-3 display-28">
+                <span class="display-26 text-secondary me-2 font-weight-600"
+                  >Mobile Number:</span
+                >694546463
+              </li>
+            </div>
+
+            <div class="col-md-6">
+              <li class="mb-2 mb-xl-3 display-28">
+                <span class="display-26 text-secondary me-2 font-weight-600"
+                  >mail:</span
+                >afslbf@gmai.com
+              </li>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-6">
+              <li class="mb-2 mb-xl-3 display-28">
+                <span class="display-26 text-secondary me-2 font-weight-600"
+                  >Adress:</span
+                >dsfhjn dfsfs fdfdsfds dfds fsdfd
+              </li>
+            </div>
+            <div class="col-md-6">
+              <li class="mb-2 mb-xl-3 display-28">
+                <span class="display-26 text-secondary me-2 font-weight-600"
+                  >Location:</span
+                >manjeri
+              </li>
+            </div>
+          </div>
+
+          <div class="row mt-3">
+            <div class="col-md-6">
+              <li class="mb-2 mb-xl-3 display-28">
+                <span class="display-26 text-secondary me-2 font-weight-600"
+                  >UserName:</span
+                >asxnkf
+              </li>
+            </div>
+            <div class="col-md-6">
+              <li class="mb-2 mb-xl-3 display-28">
+                <span class="display-26 text-secondary me-2 font-weight-600"
+                  >Password:</span
+                >asxnkf
+              </li>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-6">
+            
+            </div>
+            <div class="col-md-6">
+             
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="p-3 py-5">
+       
+       
+            <span>Identifying Documents:</span>
+            <br>
+            <ol>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ol>
+          </div>
+          <br />
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
